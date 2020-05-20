@@ -1,0 +1,28 @@
+Performance compare
+
+Task2:
+For hadoop, the running time is from 19:37:59 to 19:38:02 which is 3 seconds.
+For spark, the running time is from 19:45:14 to 19:45:17 which is also 3 seconds.
+
+Task3:
+For hadoop, the running time is from 23:51:28 to 23:51:30 which is 2 seconds.
+For spark, the running time is from 00:44:05 to 00:44:07 which is 2 seconds.
+
+From the data above, we can get that there is no difference between hadoop and spark for the same data set. Usually, the running time for spark will be faster than hadoop for large data set. Here they are the same maybe because the data set is smaller.
+
+
+For both three tasks, set up the file system of hdfs as "hdfs://127.0.0.1:9000" and put data set covid19_full_data.csv and population.csv into /input/ in hdfs using 
+hdfs dfs -put /input
+
+Using idea with hadoop_maven_pom and spark_maven_pom to access jar file.
+
+For hadoop task1, the argument will be /input/covid19_full_data.csv false /output/
+                                    or /input/covid19_full_data.csv true /output/
+
+For hadoop task2, the argument will be /input/covid19_full_data.csv 2019-12-31 2020-04-25 /output/
+
+For hadoop task3, the argument will be /input/covid19_full_data.csv /input/populations.csv /output/
+
+For spark task2, the argument will be /input/covid19_full_data.csv 2019-12-31 2020-04-25 /output/
+
+For spark task3, the argument will be /input/covid19_full_data.csv /input/populations.csv /output/

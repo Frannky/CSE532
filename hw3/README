@@ -1,0 +1,32 @@
+-- 4. drop and add all the index needed to compare the running time
+
+drop index cse532.facilityidx;
+drop index cse532.zipidx;
+DROP INDEX CSE532.FACILITYID_IDX;
+DROP INDEX CSE532.facilitycertificationID_IDX;
+DROP INDEX CSE532.AttributeValue_IDX;
+DROP INDEX CSE532.facility_ZIPCODE_IDX;
+DROP INDEX CSE532.GEOID10_IDX;
+
+create index cse532.facilityidx on cse532.facility(geolocation) extend using db2gse.spatial_index(0.85, 2, 5);
+create index cse532.zipidx on cse532.uszip(shape) extend using db2gse.spatial_index(0.85, 2, 5);
+CREATE INDEX CSE532.FACILITYID_IDX ON CSE532.FACILITY(FACILITYID);
+CREATE INDEX CSE532.facilitycertificationID_IDX ON CSE532.facilitycertification(FACILITYID);
+CREATE INDEX CSE532.AttributeValue_IDX ON CSE532.facilitycertification(AttributeValue);
+CREATE INDEX CSE532.facility_ZIPCODE_IDX ON CSE532.facility(ZIPCODE);
+CREATE INDEX CSE532.GEOID10_IDX ON CSE532.USZIP(GEOID10);
+
+running q2 with index from 2020-04-02 19:05:02.284615 to 2020-04-02 19:05:03.537309 where time = 1.252694s
+running q2 without index from 2020-04-02 20:07:49.347434 to 2020-04-02 20:07:51.033569 where time = 1.686135s
+running q3 case 1 with index from 2020-04-05 10:48:56.571217 to 2020-04-05 10:49:01.504110 where time = 4.932893s
+running q3 case 1 without index from 2020-04-05 10:50:20.727400 to 2020-04-05 10:50:27.264827 where time = 6.537427s
+running q3 case 2 with index from 2020-04-05 14:55:34.561946 to 2020-04-05 14:55:42.018165 where time = 7.456219s
+running q3 case 2 without index from 2020-04-05 14:57:52.774497 to 2020-04-05 14:58:00.357833 where time = 7.583336s
+
+The total running time for q2 with index is 1.252694s, while the time is 1.686135s without index and the difference is 0.433441s.
+The total running time for q3 case 1 with index is 4.932893s, while the time is 6.537427s without index and the difference is 1.604534s.
+The total running time for q3 case 2 with index is 7.456219s, while the time is 7.583336s without index and the difference is 0.127117s.
+
+From the result we can see that there is a performance improvement on q2 about 25.68% with index to without index, which is a big improvemment.
+There is a performance improvement on q3 case 1 about 24.54% with index to without index, which is a big improvemment.
+There is a performance improvement on q3 case 2 about 1.69% with index to without index, which is not a big improvemment.

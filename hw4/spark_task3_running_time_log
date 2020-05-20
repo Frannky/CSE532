@@ -1,0 +1,119 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+20/04/27 00:44:05 INFO SparkContext: Running Spark version 2.0.1
+20/04/27 00:44:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+20/04/27 00:44:05 WARN Utils: Your hostname, hang-Precision-M4800 resolves to a loopback address: 127.0.1.1; using 172.18.0.1 instead (on interface br-0a2e471e3243)
+20/04/27 00:44:05 WARN Utils: Set SPARK_LOCAL_IP if you need to bind to another address
+20/04/27 00:44:05 INFO SecurityManager: Changing view acls to: hang
+20/04/27 00:44:05 INFO SecurityManager: Changing modify acls to: hang
+20/04/27 00:44:05 INFO SecurityManager: Changing view acls groups to: 
+20/04/27 00:44:05 INFO SecurityManager: Changing modify acls groups to: 
+20/04/27 00:44:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(hang); groups with view permissions: Set(); users  with modify permissions: Set(hang); groups with modify permissions: Set()
+20/04/27 00:44:06 INFO Utils: Successfully started service 'sparkDriver' on port 46191.
+20/04/27 00:44:06 INFO SparkEnv: Registering MapOutputTracker
+20/04/27 00:44:06 INFO SparkEnv: Registering BlockManagerMaster
+20/04/27 00:44:06 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-de4eecf2-a654-41db-ae18-052f3bf62522
+20/04/27 00:44:06 INFO MemoryStore: MemoryStore started with capacity 873.9 MB
+20/04/27 00:44:06 INFO SparkEnv: Registering OutputCommitCoordinator
+20/04/27 00:44:06 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+20/04/27 00:44:06 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://172.18.0.1:4040
+20/04/27 00:44:06 INFO Executor: Starting executor ID driver on host localhost
+20/04/27 00:44:06 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 42587.
+20/04/27 00:44:06 INFO NettyBlockTransferService: Server created on 172.18.0.1:42587
+20/04/27 00:44:06 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 172.18.0.1, 42587)
+20/04/27 00:44:06 INFO BlockManagerMasterEndpoint: Registering block manager 172.18.0.1:42587 with 873.9 MB RAM, BlockManagerId(driver, 172.18.0.1, 42587)
+20/04/27 00:44:06 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 172.18.0.1, 42587)
+20/04/27 00:44:06 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 127.1 KB, free 873.8 MB)
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 14.3 KB, free 873.8 MB)
+20/04/27 00:44:07 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.18.0.1:42587 (size: 14.3 KB, free: 873.9 MB)
+20/04/27 00:44:07 INFO SparkContext: Created broadcast 0 from textFile at SparkCovid19_2_copy.java:27
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 127.1 KB, free 873.6 MB)
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 14.3 KB, free 873.6 MB)
+20/04/27 00:44:07 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.18.0.1:42587 (size: 14.3 KB, free: 873.9 MB)
+20/04/27 00:44:07 INFO SparkContext: Created broadcast 1 from textFile at SparkCovid19_2_copy.java:28
+20/04/27 00:44:07 INFO FileInputFormat: Total input paths to process : 1
+20/04/27 00:44:07 INFO SparkContext: Starting job: collectAsMap at SparkCovid19_2_copy.java:45
+20/04/27 00:44:07 INFO DAGScheduler: Got job 0 (collectAsMap at SparkCovid19_2_copy.java:45) with 1 output partitions
+20/04/27 00:44:07 INFO DAGScheduler: Final stage: ResultStage 0 (collectAsMap at SparkCovid19_2_copy.java:45)
+20/04/27 00:44:07 INFO DAGScheduler: Parents of final stage: List()
+20/04/27 00:44:07 INFO DAGScheduler: Missing parents: List()
+20/04/27 00:44:07 INFO DAGScheduler: Submitting ResultStage 0 (MapPartitionsRDD[4] at flatMapToPair at SparkCovid19_2_copy.java:31), which has no missing parents
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 3.4 KB, free 873.6 MB)
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 2032.0 B, free 873.6 MB)
+20/04/27 00:44:07 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.18.0.1:42587 (size: 2032.0 B, free: 873.9 MB)
+20/04/27 00:44:07 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1012
+20/04/27 00:44:07 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (MapPartitionsRDD[4] at flatMapToPair at SparkCovid19_2_copy.java:31)
+20/04/27 00:44:07 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+20/04/27 00:44:07 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, partition 0, PROCESS_LOCAL, 5468 bytes)
+20/04/27 00:44:07 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+20/04/27 00:44:07 INFO HadoopRDD: Input split: file:/home/hang/IdeaProjects/Spark_Covid19/src/main/resources/input/populations.csv:0+8640
+20/04/27 00:44:07 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+20/04/27 00:44:07 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+20/04/27 00:44:07 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+20/04/27 00:44:07 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+20/04/27 00:44:07 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+20/04/27 00:44:07 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 7631 bytes result sent to driver
+20/04/27 00:44:07 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 80 ms on localhost (1/1)
+20/04/27 00:44:07 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+20/04/27 00:44:07 INFO DAGScheduler: ResultStage 0 (collectAsMap at SparkCovid19_2_copy.java:45) finished in 0.093 s
+20/04/27 00:44:07 INFO DAGScheduler: Job 0 finished: collectAsMap at SparkCovid19_2_copy.java:45, took 0.147719 s
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 23.2 KB, free 873.6 MB)
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.6 KB, free 873.6 MB)
+20/04/27 00:44:07 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.18.0.1:42587 (size: 3.6 KB, free: 873.9 MB)
+20/04/27 00:44:07 INFO SparkContext: Created broadcast 3 from broadcast at SparkCovid19_2_copy.java:46
+20/04/27 00:44:07 INFO FileInputFormat: Total input paths to process : 1
+20/04/27 00:44:07 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 172.18.0.1:42587 in memory (size: 2032.0 B, free: 873.9 MB)
+20/04/27 00:44:07 INFO SparkContext: Starting job: saveAsTextFile at SparkCovid19_2_copy.java:66
+20/04/27 00:44:07 INFO DAGScheduler: Registering RDD 5 (flatMapToPair at SparkCovid19_2_copy.java:49)
+20/04/27 00:44:07 INFO DAGScheduler: Got job 1 (saveAsTextFile at SparkCovid19_2_copy.java:66) with 1 output partitions
+20/04/27 00:44:07 INFO DAGScheduler: Final stage: ResultStage 2 (saveAsTextFile at SparkCovid19_2_copy.java:66)
+20/04/27 00:44:07 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+20/04/27 00:44:07 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 1)
+20/04/27 00:44:07 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[5] at flatMapToPair at SparkCovid19_2_copy.java:49), which has no missing parents
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 5.2 KB, free 873.6 MB)
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.0 KB, free 873.6 MB)
+20/04/27 00:44:07 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 172.18.0.1:42587 (size: 3.0 KB, free: 873.9 MB)
+20/04/27 00:44:07 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1012
+20/04/27 00:44:07 INFO DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[5] at flatMapToPair at SparkCovid19_2_copy.java:49)
+20/04/27 00:44:07 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+20/04/27 00:44:07 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, localhost, partition 0, PROCESS_LOCAL, 5465 bytes)
+20/04/27 00:44:07 INFO Executor: Running task 0.0 in stage 1.0 (TID 1)
+20/04/27 00:44:07 INFO HadoopRDD: Input split: file:/home/hang/IdeaProjects/Spark_Covid19/src/main/resources/input/covid19_full_data.csv:0+247424
+20/04/27 00:44:07 INFO Executor: Finished task 0.0 in stage 1.0 (TID 1). 1558 bytes result sent to driver
+20/04/27 00:44:07 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 223 ms on localhost (1/1)
+20/04/27 00:44:07 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+20/04/27 00:44:07 INFO DAGScheduler: ShuffleMapStage 1 (flatMapToPair at SparkCovid19_2_copy.java:49) finished in 0.225 s
+20/04/27 00:44:07 INFO DAGScheduler: looking for newly runnable stages
+20/04/27 00:44:07 INFO DAGScheduler: running: Set()
+20/04/27 00:44:07 INFO DAGScheduler: waiting: Set(ResultStage 2)
+20/04/27 00:44:07 INFO DAGScheduler: failed: Set()
+20/04/27 00:44:07 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[7] at saveAsTextFile at SparkCovid19_2_copy.java:66), which has no missing parents
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 49.8 KB, free 873.5 MB)
+20/04/27 00:44:07 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 18.1 KB, free 873.5 MB)
+20/04/27 00:44:07 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 172.18.0.1:42587 (size: 18.1 KB, free: 873.8 MB)
+20/04/27 00:44:07 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1012
+20/04/27 00:44:07 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[7] at saveAsTextFile at SparkCovid19_2_copy.java:66)
+20/04/27 00:44:07 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+20/04/27 00:44:07 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, localhost, partition 0, ANY, 5189 bytes)
+20/04/27 00:44:07 INFO Executor: Running task 0.0 in stage 2.0 (TID 2)
+20/04/27 00:44:07 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+20/04/27 00:44:07 INFO deprecation: mapred.output.key.class is deprecated. Instead, use mapreduce.job.output.key.class
+20/04/27 00:44:07 INFO deprecation: mapred.output.value.class is deprecated. Instead, use mapreduce.job.output.value.class
+20/04/27 00:44:07 INFO deprecation: mapred.working.dir is deprecated. Instead, use mapreduce.job.working.dir
+20/04/27 00:44:07 INFO ShuffleBlockFetcherIterator: Getting 1 non-empty blocks out of 1 blocks
+20/04/27 00:44:07 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+20/04/27 00:44:07 INFO FileOutputCommitter: Saved output of task 'attempt_202004270044_0002_m_000000_2' to file:/home/hang/IdeaProjects/Spark_Covid19/src/main/resources/output/_temporary/0/task_202004270044_0002_m_000000
+20/04/27 00:44:07 INFO SparkHadoopMapRedUtil: attempt_202004270044_0002_m_000000_2: Committed
+20/04/27 00:44:07 INFO Executor: Finished task 0.0 in stage 2.0 (TID 2). 1553 bytes result sent to driver
+20/04/27 00:44:07 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 100 ms on localhost (1/1)
+20/04/27 00:44:07 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+20/04/27 00:44:07 INFO DAGScheduler: ResultStage 2 (saveAsTextFile at SparkCovid19_2_copy.java:66) finished in 0.101 s
+20/04/27 00:44:07 INFO DAGScheduler: Job 1 finished: saveAsTextFile at SparkCovid19_2_copy.java:66, took 0.376094 s
+20/04/27 00:44:07 INFO SparkUI: Stopped Spark web UI at http://172.18.0.1:4040
+20/04/27 00:44:07 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+20/04/27 00:44:07 INFO MemoryStore: MemoryStore cleared
+20/04/27 00:44:07 INFO BlockManager: BlockManager stopped
+20/04/27 00:44:07 INFO BlockManagerMaster: BlockManagerMaster stopped
+20/04/27 00:44:07 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+20/04/27 00:44:07 INFO SparkContext: Successfully stopped SparkContext
+20/04/27 00:44:07 INFO ShutdownHookManager: Shutdown hook called
+20/04/27 00:44:07 INFO ShutdownHookManager: Deleting directory /tmp/spark-d22882e6-2917-46d6-b37e-1034a744d99b
